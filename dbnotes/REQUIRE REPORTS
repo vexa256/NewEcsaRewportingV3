@@ -1,0 +1,36 @@
+vw_cluster_vs_target_achievements
+
+Purpose: For each cluster and indicator, calculate total actual values reported versus the target values, returning both the absolute and percentage achievement.
+Key Analytics:
+Percentage of target achieved ((SUM(actual) / SUM(target)) * 100) for numeric indicators.
+Indicators flagged if under certain thresholds (e.g., <50%, <90%, etc.).
+vw_performance_over_time_by_quarter
+
+Purpose: Show how each cluster’s performance (actual vs. target) evolves quarter by quarter (or reporting timeline by timeline).
+Key Analytics:
+Quarter-to-quarter performance trends.
+Yearly breakdown to quickly identify improvement or regressions.
+vw_cluster_performance_ranking
+
+Purpose: Provide a rank or overall performance “score” per cluster based on how many of their indicators meet or exceed targets.
+Key Analytics:
+Weighted or simple average of performance on all relevant indicators.
+Ranking of clusters from highest to lowest achievement.
+vw_indicator_gap_analysis
+
+Purpose: Highlight indicators that are most behind in meeting targets, including the gap between current actual and target.
+Key Analytics:
+Gap or shortfall: (target - actual).
+Automatic “Needs Attention” alerts for large deficits.
+vw_threshold_alerts_and_flags
+
+Purpose: Return only those indicators below a specified threshold (e.g., <10% target), or that are completely unreported for each cluster in a given quater
+Key Analytics:
+Quick visibility of red-flag indicators.
+Focus on those requiring immediate follow-up.
+vw_user_contributions_and_reporting_activity
+
+Purpose: Track which user(s) submitted performance data, the timeliness of reporting, and how many indicators each user covered.
+Key Analytics:
+Number of reports or updates per user.
+Clusters or indicators with no user submissions (i.e., no activity).

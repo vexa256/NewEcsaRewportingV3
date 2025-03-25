@@ -1,0 +1,122 @@
+## MySQL Views Overview
+
+The database contains several well-designed analytical views that can be leveraged for reporting:
+
+### Cluster Performance Views
+
+1. `dashboard_cluster_completeness_summary` - Shows reporting completeness by cluster
+2. `dashboard_cluster_quarterly_rank` - Ranks clusters by quarterly performance
+3. `vw_cluster_rank_annual` - Annual performance ranking of clusters
+4. `vw_cluster_rank_by_quarter` - Quarterly performance ranking
+5. `vw_cluster_rank_semiannual` - Semi-annual performance ranking
+6. `vw_cluster_so_performance_summary` - Strategic objective performance by cluster
+
+
+### Indicator Performance Views
+
+1. `vw_annual_indicator_performance` - Annual performance of indicators
+2. `vw_annual_performance_dashboard` - Dashboard view of annual performance
+3. `vw_cluster_vs_target_achievements` - Compares actual vs target values
+4. `vw_performance_over_time_by_quarter` - Quarterly performance trends
+5. `vw_threshold_alerts_and_flags` - Highlights indicators needing attention
+
+
+### Other Analytical Views
+
+1. `vw_semi_annual_cluster_summary` - Semi-annual cluster performance summary
+2. `vw_semi_annual_performance` - Semi-annual indicator performance
+3. `vw_semi_annual_trend_analysis` - Trend analysis between first and second half of year
+4. `vw_so_indicators_report` - Strategic objective indicator reporting
+
+
+## Potential Reports
+
+Based on these views, here are the reports that could be extracted:
+
+### Performance Monitoring Reports
+
+1. **Cluster Performance Dashboard**
+
+1. Overall performance ranking of clusters
+2. Performance by strategic objective
+3. Year-to-date achievement percentages
+
+
+
+2. **Quarterly Performance Report**
+
+1. Quarter-by-quarter performance comparison
+2. Ranking of clusters by quarterly performance
+3. Progress against annual targets
+
+
+
+3. **Semi-Annual Performance Analysis**
+
+1. First half vs second half performance comparison
+2. Trend analysis showing improvement or decline
+3. Mid-year progress against annual targets
+
+
+
+4. **Strategic Objective Achievement Report**
+
+1. Performance by strategic objective
+2. Contribution of each cluster to strategic objectives
+3. Gap analysis for strategic objectives
+
+
+
+
+
+### Operational Reports
+
+1. **Reporting Completeness Report**
+
+1. Percentage of indicators reported by each cluster
+2. Missing data identification
+3. Reporting compliance tracking
+
+
+
+2. **Performance Alert Report**
+
+1. Indicators below threshold (needs attention)
+2. Early warning system for underperforming areas
+3. Prioritization of intervention areas
+
+
+
+3. **Target Achievement Analysis**
+
+1. Actual vs target comparison
+2. Over-achievement and under-achievement analysis
+3. Target setting effectiveness evaluation
+
+
+
+
+
+### Trend Analysis Reports
+
+1. **Performance Trend Report**
+
+1. Quarter-by-quarter performance trends
+2. Year-over-year comparison
+3. Progress trajectory analysis
+
+
+
+2. **Indicator Performance Over Time**
+
+1. Historical performance of key indicators
+2. Seasonal patterns identification
+3. Long-term performance trajectory
+
+
+
+3. **Cluster Improvement Report**
+
+1. Most improved clusters
+2. Performance change percentage
+3. Success story identification
