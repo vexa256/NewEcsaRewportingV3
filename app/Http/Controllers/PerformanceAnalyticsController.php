@@ -307,18 +307,18 @@ class PerformanceAnalyticsController extends Controller
 
         // Calculate overall metrics with proper handling of NULL values
         $data = $query->selectRaw('
-        COUNT(DISTINCT cluster_pk) as total_clusters,
-        COUNT(DISTINCT so_pk) as total_strategic_objectives,
-        COUNT(DISTINCT indicator_pk) as total_indicators,
-        AVG(CASE WHEN achievement_percent IS NOT NULL THEN achievement_percent ELSE NULL END) as overall_achievement_percent,
-        SUM(CASE WHEN status_label = "Needs Attention" COLLATE utf8mb4_unicode_ci THEN 1 ELSE 0 END) as needs_attention_count,
-        SUM(CASE WHEN status_label = "In Progress" COLLATE utf8mb4_unicode_ci THEN 1 ELSE 0 END) as in_progress_count,
-        SUM(CASE WHEN status_label = "On Track" COLLATE utf8mb4_unicode_ci THEN 1 ELSE 0 END) as on_track_count,
-        SUM(CASE WHEN status_label = "Met" COLLATE utf8mb4_unicode_ci THEN 1 ELSE 0 END) as met_count,
-        SUM(CASE WHEN comment = "Over Achieved" COLLATE utf8mb4_unicode_ci THEN 1 ELSE 0 END) as over_achieved_count,
-        MIN(timeline_year) as min_year,
-        MAX(timeline_year) as max_year
-    ')->first();
+            COUNT(DISTINCT cluster_pk) as total_clusters,
+            COUNT(DISTINCT so_pk) as total_strategic_objectives,
+            COUNT(DISTINCT indicator_pk) as total_indicators,
+            AVG(CASE WHEN achievement_percent IS NOT NULL THEN achievement_percent ELSE NULL END) as overall_achievement_percent,
+            SUM(CASE WHEN status_label = "Needs Attention" THEN 1 ELSE 0 END) as needs_attention_count,
+            SUM(CASE WHEN status_label = "In Progress" THEN 1 ELSE 0 END) as in_progress_count,
+            SUM(CASE WHEN status_label = "On Track" THEN 1 ELSE 0 END) as on_track_count,
+            SUM(CASE WHEN status_label = "Met" THEN 1 ELSE 0 END) as met_count,
+            SUM(CASE WHEN comment = "Over Achieved" THEN 1 ELSE 0 END) as over_achieved_count,
+            MIN(timeline_year) as min_year,
+            MAX(timeline_year) as max_year
+        ')->first();
 
         // Calculate overall status using centralized thresholds
         if ($data && $data->overall_achievement_percent !== null) {
